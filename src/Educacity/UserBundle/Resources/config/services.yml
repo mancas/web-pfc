@@ -1,0 +1,23 @@
+parameters:
+    user.manager.class: Educacity\UserBundle\Form\Handler\UserManager
+    user.createuserformhandler.class: Educacity\UserBundle\Form\Handler\CreateUserFormHandler
+    user.createsalt.class: Educacity\UserBundle\EventListener\CreateUserSaltEventSubscriber
+    user.send_welcome_email.class: Ecommerce\UserBundle\EventListener\SendWelcomeEmailListener
+
+services:
+    user.manager:
+        class: %user.manager.class%
+        arguments: [@doctrine.orm.entity_manager]
+    user.create_user_form_handler:
+        class: %user.createuserformhandler.class%
+        arguments: [@user.manager]
+    user.create_salt_listener:
+        class: %user.createsalt.class%
+        arguments: [@security.encoder_factory]
+        tags:
+            - { name: doctrine.event_subscriber }
+    user.send_welcome_email:
+        class: %user.send_welcome_email.class%
+        arguments: [@mailer, @templating, @router, %noreply_email%]
+        tags:
+            - { name: kernel.event_subscriber }
