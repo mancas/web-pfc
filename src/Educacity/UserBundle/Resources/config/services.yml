@@ -2,7 +2,7 @@ parameters:
     user.manager.class: Educacity\UserBundle\Form\Handler\UserManager
     user.createuserformhandler.class: Educacity\UserBundle\Form\Handler\CreateUserFormHandler
     user.createsalt.class: Educacity\UserBundle\EventListener\CreateUserSaltEventSubscriber
-    user.send_welcome_email.class: Ecommerce\UserBundle\EventListener\SendWelcomeEmailListener
+    user.send_welcome_email.class: Educacity\UserBundle\EventListener\SendWelcomeEmailListener
 
 services:
     user.manager:

@@ -27,6 +27,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $context = $this->context;
         $request = $this->request;
 
+        if (0 === strpos($pathinfo, '/css/main')) {
+            // _assetic_55e31cb
+            if ($pathinfo === '/css/main.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => '55e31cb',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_55e31cb',);
+            }
+
+            if (0 === strpos($pathinfo, '/css/main_')) {
+                // _assetic_55e31cb_0
+                if ($pathinfo === '/css/main_font-awesome.min_1.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '55e31cb',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_55e31cb_0',);
+                }
+
+                // _assetic_55e31cb_1
+                if ($pathinfo === '/css/main_custom_2.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => '55e31cb',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_55e31cb_1',);
+                }
+
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/_')) {
             // _wdt
             if (0 === strpos($pathinfo, '/_wdt') && preg_match('#^/_wdt/(?P<token>[^/]++)$#s', $pathinfo, $matches)) {
@@ -131,6 +152,41 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                     return array (  '_controller' => 'Sensio\\Bundle\\DistributionBundle\\Controller\\ConfiguratorController::finalAction',  '_route' => '_configurator_final',);
                 }
 
+            }
+
+        }
+
+        // register
+        if ($pathinfo === '/u/registro') {
+            return array (  '_controller' => 'Educacity\\UserBundle\\Controller\\AccessController::registerAction',  '_route' => 'register',);
+        }
+
+        // frontend_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'frontend_homepage');
+            }
+
+            return array (  '_controller' => 'Educacity\\FrontendBundle\\Controller\\FrontendController::indexAction',  '_route' => 'frontend_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/log')) {
+            if (0 === strpos($pathinfo, '/login')) {
+                // login
+                if ($pathinfo === '/login') {
+                    return array (  '_controller' => 'Educacity\\UserBundle\\Controller\\AccessController::loginAction',  '_route' => 'login',);
+                }
+
+                // login_check
+                if ($pathinfo === '/login_check') {
+                    return array('_route' => 'login_check');
+                }
+
+            }
+
+            // logout
+            if ($pathinfo === '/logout') {
+                return array('_route' => 'logout');
             }
 
         }

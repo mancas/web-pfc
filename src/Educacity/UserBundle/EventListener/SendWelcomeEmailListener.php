@@ -9,7 +9,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\Templating\EngineInterface;
 use Symfony\Component\Routing\Router;
 
-class SendActivationEmailListener implements EventSubscriberInterface
+class SendWelcomeEmailListener implements EventSubscriberInterface
 {
     private $mailer;
     private $templating;
@@ -19,7 +19,7 @@ class SendActivationEmailListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            UserEvents::NEW_USER => 'onNewUser',
+            UserEvents::NEW_USER_CREATED => 'onNewUser',
             UserEvents::RECOVER_PASSWORD => 'onRecoverPassword'
         );
     }
