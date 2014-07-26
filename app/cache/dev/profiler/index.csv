@@ -1,0 +1,8 @@
+6920e3,127.0.0.1,GET,http://localhost/pfc/web/app_dev.php/_configurator/,1406369890,
+19fb57,127.0.0.1,GET,http://localhost/pfc/web/app_dev.php/_configurator/step/0,1406369891,
+4a6bd8,127.0.0.1,POST,http://localhost/pfc/web/app_dev.php/_configurator/step/0,1406369905,
+e6fab8,127.0.0.1,GET,http://localhost/pfc/web/app_dev.php/_configurator/step/1,1406369906,
+068926,127.0.0.1,POST,http://localhost/pfc/web/app_dev.php/_configurator/step/1,1406369909,
+21e2c5,127.0.0.1,GET,http://localhost/pfc/web/app_dev.php/_configurator/final,1406369909,
+3304aa,127.0.0.1,GET,http://localhost/pfc/web/app_dev.php/,1406370007,edae1f
+edae1f,127.0.0.1,GET,http://localhost/pfc/web/app_dev.php/,1406370007,
