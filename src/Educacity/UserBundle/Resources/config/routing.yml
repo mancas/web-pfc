@@ -1,3 +1,7 @@
 register:
     pattern:  /registro
     defaults: { _controller: UserBundle:Access:register }
+
+subscribe:
+    pattern: /subscribirse
+    defaults: { _controller: UserBundle:Access:subscribe }

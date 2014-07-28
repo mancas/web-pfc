@@ -18,6 +18,9 @@ body {
   margin-right: 0px;
   margin-left: 0px; }
 
+.pl25 {
+  padding-left: 25px; }
+
 .educacity-navbar {
   height: 59px;
   background-color: white;
@@ -29,6 +32,11 @@ body {
   .educacity-navbar a {
     padding: 19px 15px !important;
     height: auto; }
+    .educacity-navbar a:focus, .educacity-navbar a:active {
+      outline: none !important; }
+  .educacity-navbar li.active a {
+    border-bottom: solid 4px #3672b1;
+    padding: 18px 15px 17px 15px !important; }
   .educacity-navbar .educacity-menu {
     font-size: 23px;
     background-color: #FBFBFB;
@@ -149,9 +157,23 @@ section .container {
     line-height: 35px;
     color: #5b6064; }
 
+.stack.share-stack {
+  min-height: 600px;
+  overflow: hidden; }
+  .stack.share-stack img {
+    margin: 0px; }
+
 .stack img {
   display: block;
   margin: auto; }
+
+/** Section colors **/
+section.blue {
+  background-color: #3672b1;
+  color: white; }
+
+section.gray {
+  background-color: #e1e4e6; }
 
 .bg-parallax {
   width: 100%;
@@ -181,6 +203,26 @@ section .container {
     color: #5b6064; }
 
 /**
+* Home Stack Styles
+*/
+.nexus-picture {
+  position: absolute;
+  bottom: -315px;
+  background: url("../img/nexus-picture.png") no-repeat;
+  padding: 23px 72px 23px 72px;
+  width: 574px;
+  height: 290px; }
+  .nexus-picture .objetive {
+    background: url("../img/photo_objetive.png") no-repeat center center;
+    background-size: 120px 120px;
+    width: 574px;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+
+/**
 *  Buttons
 */
 .btn-blue {
@@ -198,6 +240,12 @@ section .container {
     margin-right: 8px;
     font-size: 16px; }
 
+.btn-blue.btn-small {
+  padding: 6px 12px;
+  margin-left: 10px; }
+  .btn-blue.btn-small:hover {
+    color: white; }
+
 .btn-block {
   border-radius: 2px;
   color: white;
@@ -205,3 +253,29 @@ section .container {
   padding: 10px 15px; }
   .btn-block:hover {
     color: white; }
+
+/** Platforms **/
+.platforms {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px; }
+  .platforms li {
+    display: inline-block;
+    margin-right: 40px;
+    line-height: 50px; }
+
+/** FOOTER **/
+footer {
+  background-color: #5b6064;
+  min-height: 250px;
+  padding-top: 40px;
+  color: white; }
+  footer ul li {
+    line-height: 25px; }
+  footer a {
+    color: white; }
+    footer a:hover {
+      color: white; }
+  footer .container {
+    max-width: 1170px; }

@@ -1,0 +1,160 @@
+/** COLOR **/
+$blue: #3672b1;
+$red: #d9534f;
+$white: #FFFFFF;
+$gray : #5B6064;
+$orange: #f97b36;
+
+.timeline:before {
+  width: 3px;
+  left: 50%;
+  position: absolute;
+  background-color: $gray;
+  margin-left: -1.5px;
+  content: " ";
+  height: 100%;
+  min-height: 500px;
+}
+
+.timeline {
+  list-style: none outside none;
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box;
+
+  li:before, li:after {
+    display: table;
+    content: " ";
+  }
+
+  li:after {
+    clear: both;
+  }
+
+  li {
+    position: relative;
+    margin: auto;
+    margin-bottom: 40px;
+    max-width: 500px;
+
+    &:first-child {
+      padding-top: 20px;
+
+      .badge {
+        top: 35px;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 50px;
+    }
+
+    .badge {
+      position: absolute;
+      border-radius: 50%;
+      color: $white;
+      width: 50px;
+      height: 50px;
+      left: 50%;
+      margin-left: -25px;
+      padding: 0px;
+      line-height: 50px;
+      top: 15px;
+    }
+
+    .badge-content {
+      width: 40%;
+      background-color: $white;
+      position: relative;
+      float: left;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.176);
+      margin-right: 15px;
+      padding: 4px;
+
+      &:before {
+        position: absolute;
+        content: " ";
+        border-width: 15px 0 15px 15px;
+        border-color: transparent $blue;
+        border-style: solid;
+        z-index: 100;
+        display: inline-block;
+        right: -15px;
+        top: 25px;
+      }
+    }
+  }
+
+  li.inverse-badge {
+    .badge-content {
+      float: right;
+      margin-left: 15px;
+      margin-right: 0px;
+
+      &:before {
+        position: absolute;
+        content: " ";
+        border-width: 15px 15px 15px 0px;
+        border-color: transparent $blue;
+        border-style: solid;
+        z-index: 100;
+        display: inline-block;
+        left: -15px;
+        right: auto;
+        top: 25px;
+      }
+    }
+  }
+
+  li.blue {
+    .badge, .badge-content {
+      background-color: $blue;
+      color: $white;
+    }
+
+    .badge-content {
+      &:before {
+        border-color: transparent $blue;
+      }
+    }
+  }
+
+  li.red {
+    .badge, .badge-content {
+      background-color: $red;
+      color: $white;
+    }
+
+    .badge-content {
+      &:before {
+        border-color: transparent $red;
+      }
+    }
+  }
+
+  li.gray {
+    .badge, .badge-content {
+      background-color: $gray;
+      color: $white;
+    }
+
+    .badge-content {
+      &:before {
+        border-color: transparent $gray;
+      }
+    }
+  }
+
+  li.orange {
+    .badge, .badge-content {
+      background-color: $orange;
+      color: $white;
+    }
+
+    .badge-content {
+      &:before {
+        border-color: transparent $orange;
+      }
+    }
+  }
+}

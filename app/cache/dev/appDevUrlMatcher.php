@@ -28,6 +28,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         $request = $this->request;
 
         if (0 === strpos($pathinfo, '/css/main')) {
+            // _assetic_cc5be16
+            if ($pathinfo === '/css/main.css') {
+                return array (  '_controller' => 'assetic.controller:render',  'name' => 'cc5be16',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_cc5be16',);
+            }
+
+            if (0 === strpos($pathinfo, '/css/main_')) {
+                // _assetic_cc5be16_0
+                if ($pathinfo === '/css/main_font-awesome.min_1.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'cc5be16',  'pos' => 0,  '_format' => 'css',  '_route' => '_assetic_cc5be16_0',);
+                }
+
+                // _assetic_cc5be16_1
+                if ($pathinfo === '/css/main_custom_2.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'cc5be16',  'pos' => 1,  '_format' => 'css',  '_route' => '_assetic_cc5be16_1',);
+                }
+
+                // _assetic_cc5be16_2
+                if ($pathinfo === '/css/main_timeline_3.css') {
+                    return array (  '_controller' => 'assetic.controller:render',  'name' => 'cc5be16',  'pos' => 2,  '_format' => 'css',  '_route' => '_assetic_cc5be16_2',);
+                }
+
+            }
+
             // _assetic_55e31cb
             if ($pathinfo === '/css/main.css') {
                 return array (  '_controller' => 'assetic.controller:render',  'name' => '55e31cb',  'pos' => NULL,  '_format' => 'css',  '_route' => '_assetic_55e31cb',);
@@ -156,9 +179,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // register
-        if ($pathinfo === '/u/registro') {
-            return array (  '_controller' => 'Educacity\\UserBundle\\Controller\\AccessController::registerAction',  '_route' => 'register',);
+        if (0 === strpos($pathinfo, '/u')) {
+            // register
+            if ($pathinfo === '/u/registro') {
+                return array (  '_controller' => 'Educacity\\UserBundle\\Controller\\AccessController::registerAction',  '_route' => 'register',);
+            }
+
+            // subscribe
+            if ($pathinfo === '/u/subscribirse') {
+                return array (  '_controller' => 'Educacity\\UserBundle\\Controller\\AccessController::subscribeAction',  '_route' => 'subscribe',);
+            }
+
         }
 
         // frontend_homepage

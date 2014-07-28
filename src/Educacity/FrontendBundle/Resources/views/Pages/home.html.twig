@@ -1,7 +1,7 @@
 {% extends "FrontendBundle:Layouts:1column.html.twig" %}
 
-{% block title %}{{ "Portal de alquiler temporal de espacios comerciales y eventos: espacios para pop-up stores, corners, eventos y showrooms"|trans }}{% endblock %}
-{% block description %}{{"Portal para el alquiler de espacios comerciales por meses, semanas y días. Portal de alquiler de espacios para pop-ups, espacios para corners, espacios para eventos, espacios de coworking "|trans}}{% endblock %}
+{% block title %}{{ "Aprende y descubre Sevilla con Educacity"|trans }}{% endblock %}
+{% block description %}{{"Aplicación turística y educativa para todos los públicos, con la que podrás disfrutar y aprender la historia sobre la que fue construida Sevilla"|trans}}{% endblock %}
 {% block sectionclass %}home page{% endblock %}
 
 {% block header %}
@@ -9,11 +9,11 @@
 {% endblock %}
 
 {% block content %}
-    <section id="#introduction">
+    <section id="introduction" role="contentinfo">
         <div class="container stack">
             <div class="row">
                 <div class="col-md-6">
-                    <img alt="Educacity-smartphone" class="pull-riht" src="{{ asset('bundles/frontend/img/smartphone.jpg') }}" >
+                    <img alt="Educacity-smartphone" class="pull-right" src="{{ asset('bundles/frontend/img/smartphone.jpg') }}" >
                 </div><!-- .col-md-6 -->
                 <div class="col-md-6">
                     <h2 class="stack-title">{{ 'Historia y tecnología unidas en una única aplicación' | trans }}</h2>
@@ -32,12 +32,117 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="parallax-title">{{ 'Captura tus momentos únicos junto a los que más quieres' | trans }}</h2>
+                        <h2 class="parallax-title">{{ 'Captura momentos únicos' | trans }}</h2>
                     </div>
                 </div>
             </div>
         </section>
     </div><!-- .bg-parallax .multimedia -->
+
+    <section id="features" class="blue" role="contentinfo">
+        <div class="container stack">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="stack-title">{{ 'Almacena tus fotos en la nube para acceder a ellas desde cualquier lugar y dispositivo' | trans }}</h2>
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                    <img alt="Educacity-graph" class="pull-" src="{{ asset('bundles/frontend/img/graph_cloud.png') }}" >
+                </div><!-- .col-md-6 -->
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
+    </section>
+
+    <section id="share" role="contentinfo">
+        <div class="container stack share-stack">
+            <div class="row">
+                <div class="col-md-7">
+                    <div>
+                        <img class="img-responsive" src="{{ asset('bundles/frontend/img/share_social.png') }}">
+                    </div>
+                    <div class="nexus-picture">
+                        <img src="{{ asset('bundles/frontend/img/sevilla-banner-top.jpg') }}" class="img-responsive">
+                        <div class="objetive"></div>
+                    </div>
+                </div><!-- .col-md-7 -->
+                <div class="col-md-5">
+                    <h2 class="stack-title">{{ 'Comparte tus mejores momentos' | trans }}</h2>
+                    <p class="stack-description">
+                        {{ 'Elige si quieres compartir tus mejores fotos con la comunidad.' | trans }}
+                    </p>
+                </div><!-- .col-md-5 -->
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
+    </section>
+
+    <section id="past-and-present" class="gray" role="contentinfo">
+        <div class="container stack">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2 class="stack-title text-center">{{ 'Revive el pasado' | trans }}</h2>
+                    <p class="stack-description text-center">
+                        {{ '¿Te gustaría ver el mismo lugar hace 50 años? Educacity permite ver la evolución de los sitios más enblemáticos de tu ciudad.' | trans }}
+                    </p>
+                </div><!-- .col-md-5 -->
+
+                <div class="col-md-7">
+                    <ul class="timeline">
+                        <li class="blue">
+                            <div class="badge">
+                                1975
+                            </div>
+                            <div class="badge-content">
+                                <img src="{{ asset('bundles/frontend/img/sevilla-banner-top.jpg') }}" class="img-responsive">
+                            </div>
+                        </li>
+                        <li class="red inverse-badge">
+                            <div class="badge">
+                                1975
+                            </div>
+                            <div class="badge-content">
+                                <img src="{{ asset('bundles/frontend/img/sevilla-banner-top.jpg') }}" class="img-responsive">
+                            </div>
+                        </li>
+                        <li class="orange">
+                            <div class="badge">
+                                1975
+                            </div>
+                            <div class="badge-content">
+                                <img src="{{ asset('bundles/frontend/img/sevilla-banner-top.jpg') }}" class="img-responsive">
+                            </div>
+                        </li>
+                    </ul><!-- .timeline -->
+                </div><!-- .col-md-7 -->
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
+    </section>
+
+    <section id="platforms" role="contentinfo">
+        <div class="container stack">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="stack-title text-center">{{ 'Plataformas disponibles' | trans }}</h2>
+                    <p class="stack-description text-center">
+                        {{ 'Educacity estará disponible en las siguientes plataformas, sin embargo puedes empezar a utilizarla con tu dispositivo Firefox OS' | trans }}
+                    </p>
+                </div><!-- .col-md-12 -->
+
+                <div class="col-md-12">
+                    <ul class="list-unstyled platforms">
+                        <li>
+                            <img src="{{ asset('bundles/frontend/img/platforms/android.png') }}" class="img-responsive">
+                            Android
+                        </li>
+                        <li>
+                            <a title="{{ 'Descargar app' }}" href="https://marketplace.firefox.com/app/educacity/">
+                                <img src="{{ asset('bundles/frontend/img/platforms/firefox.png') }}" class="img-responsive">
+                                Firefox OS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
+    </section>
 
     {#<div class="row">
       <div class="col-md-12 logos-company">
@@ -48,6 +153,19 @@
       </div>
     </div>#}
 
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/frontend/js/scrollTo.min.js') }}"></script>
+    <script>
+        $('document').ready(function() {
+            $(".scrollto a").click(function (event) {
+                event.preventDefault();
+                var target = $(this).attr('href');
+                $.scrollTo(target, 600);
+            });
+        });
+    </script>
 {% endblock %}
 
 {% block footer %}

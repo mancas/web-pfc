@@ -1,3 +1,23 @@
 <footer>
-    <div>Hola</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="list-unstyled">
+                    <li><a title="{{ 'Aviso legal' | trans }}" href="">{{ 'Aviso legal' | trans }}</a></li>
+                    <li><a title="{{ 'Contacto' | trans }}" href="mailto:{{ contact_email }}">{{ 'Contacta con nosotros' | trans }}</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5">
+                <h4>{{ 'Mantente informado' | trans }}</h4>
+                <p>{{ 'Dejanos tu correo y te informaremos en primicia de las últimas novedades de Educacity' | trans }}</p>
+                <form class="form-inline" method="post" action="{{ path('subscribe') }}">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="{{ 'Introduce tu email' | trans }}">
+                        <button type="submit" class="btn-small btn btn-blue">{{ 'Enviar' | trans }}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </footer>

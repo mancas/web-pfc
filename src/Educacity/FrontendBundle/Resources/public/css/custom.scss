@@ -19,6 +19,8 @@ body {
 
 .nmr { margin-right: 0px; margin-left: 0px; }
 
+.pl25 { padding-left: 25px; }
+
 .educacity-navbar {
   height: 59px;
   background-color: $white;
@@ -33,6 +35,17 @@ body {
   a {
     padding: 19px 15px !important;
     height: auto;
+
+    &:focus, &:active {
+      outline: none !important;
+    }
+  }
+
+  li.active {
+    a {
+      border-bottom: solid 4px $light-blue;
+      padding: 18px 15px 17px 15px !important;
+    }
   }
 
   .educacity-menu {
@@ -199,9 +212,28 @@ section {
   }
 }
 
+.stack.share-stack {
+  min-height: 600px;
+  overflow: hidden;
+
+  img {
+    margin: 0px;
+  }
+}
+
 .stack img {
   display: block;
   margin: auto;
+}
+
+/** Section colors **/
+section.blue {
+  background-color: $light-blue;
+  color: $white;
+}
+
+section.gray {
+  background-color: $light-gray;
 }
 
 .bg-parallax {
@@ -238,6 +270,30 @@ section {
 }
 
 /**
+* Home Stack Styles
+*/
+
+.nexus-picture {
+  position: absolute;
+  bottom: -315px;
+  background: url('../img/nexus-picture.png') no-repeat;
+  padding: 23px 72px 23px 72px;
+  width: 574px;
+  height: 290px;
+
+  .objetive {
+    background: url("../img/photo_objetive.png") no-repeat center center;
+    background-size: 120px 120px;
+    width: 574px;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+/**
 *  Buttons
 */
 
@@ -261,6 +317,15 @@ section {
   }
 }
 
+.btn-blue.btn-small {
+  padding: 6px 12px;
+  margin-left: 10px;
+
+  &:hover {
+    color: $white;
+  }
+}
+
 .btn-block {
   border-radius: 2px;
   color: $white;
@@ -269,5 +334,44 @@ section {
 
   &:hover {
     color: $white;
+  }
+}
+
+/** Platforms **/
+.platforms {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  li {
+    display: inline-block;
+    margin-right: 40px;
+    line-height: 50px;
+  }
+}
+
+/** FOOTER **/
+footer {
+  background-color: $gray;
+  min-height: 250px;
+  padding-top: 40px;
+  color: $white;
+
+  ul {
+    li {
+      line-height: 25px;
+    }
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .container {
+    max-width: 1170px;
   }
 }

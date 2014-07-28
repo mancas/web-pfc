@@ -1,0 +1,34 @@
+{% extends "FrontendBundle:Layouts:1column.html.twig" %}
+
+{% block title %}{{ "Gracias por formar parte de Educacity"|trans }}{% endblock %}
+{% block description %}{{"Te enviaremos información sobre la aplicación antes de publicarla en la web. Estate atento a las últimas novedades."|trans}}{% endblock %}
+{% block sectionclass %}registration page{% endblock %}
+
+{% block header %}
+    {% include 'FrontendBundle:Commons:nav-top.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container stack">
+            <div class="row">
+                <div class="col-md-6">
+                    <img alt="Educacity-smartphone" class="pull-right" src="{{ asset('bundles/frontend/img/smartphone.jpg') }}" >
+                </div><!-- .col-md-6 -->
+                <div class="col-md-6">
+                    <h2 class="stack-title">{{ 'Gracias por suscribirte a nuestro boletín de noticias' | trans }}</h2>
+                    <p class="stack-description">
+                        {{ 'Recuerda que te notificaremos por email cualquier novedad en el proyecto y tendrás acceso exclusivo a la beta de la aplicación una vez este lista.' | trans }}
+                        <br>
+                        {{ 'Si quieres más información sobre Educacity o tienes cualquier duda, no dudes en contactar con nosotros a través de nuestro correo electrónico' | trans }}
+                        <a href="mailto:{{ contact_email }}" title="{{ 'Contacta con nosotros' | trans }}">{{ contact_email }}</a> {{ ', estaremos encantados de ayudarte' | trans }}
+                    </p>
+                </div><!-- .col-md-6 -->
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

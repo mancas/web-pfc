@@ -16,3 +16,4 @@ parameters:
     debug_redirects: false
     use_assetic_controller: true
     noreply_email: noreply@educacity.com
+    contact_email: educacity.sevilla@gmail.com
