@@ -21,12 +21,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right scrollto">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#introduction">¿Qué es Educacity?</a></li>
-                <li><a href="#features">La nube y tus dispositivos</a></li>
-                <li><a href="#share">Comparte con el resto</a></li>
-                <li><a href="#past-and-present">Pasado y presente</a></li>
-                <li><a href="#platforms">Plataformas</a></li>
+                <li><a href="{% if notHome is defined %}{{ path('frontend_homepage') }}{% endif %}#home">Inicio</a></li>
+                <li><a href="{% if notHome is defined %}{{ path('frontend_homepage') }}{% endif %}#introduction">¿Qué es Educacity?</a></li>
+                <li><a href="{% if notHome is defined %}{{ path('frontend_homepage') }}{% endif %}#features">La nube y tus dispositivos</a></li>
+                <li><a href="{% if notHome is defined %}{{ path('frontend_homepage') }}{% endif %}#share">Comparte con el resto</a></li>
+                <li><a href="{% if notHome is defined %}{{ path('frontend_homepage') }}{% endif %}#past-and-present">Pasado y presente</a></li>
+                <li><a href="{% if notHome is defined %}{{ path('frontend_homepage') }}{% endif %}#platforms">Plataformas</a></li>
                 {#<li>
                     <a class="login" data-toggle="collapse" data-target=".navbar-form-container" href="#login">Acceder</a>
                 </li>

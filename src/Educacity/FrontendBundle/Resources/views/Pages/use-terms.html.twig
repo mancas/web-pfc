@@ -1,0 +1,44 @@
+{% extends "FrontendBundle:Layouts:1column.html.twig" %}
+
+{% block title %}{{ "Sobre Educacity"|trans }}{% endblock %}
+{% block description %}{{"Educacity, la aplicación que combina historia y tecnología"|trans}}{% endblock %}
+{% block sectionclass %}registration page{% endblock %}
+
+{% block header %}
+    {% include 'FrontendBundle:Commons:nav-top.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container stack">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="stack-title">{{ '¿Qué es Educacity?' | trans }}</h2>
+                    <p class="stack-description">
+                        {{ 'Educacity es una aplicación móvil, destinada a fomentar la cultura de Sevilla a través del aprendizaje. Una aplicación totalmente gratuita, sin coste alguno para el usuario que desee utilizarla. Requiere de registro previo para poder utilizar todas las funcionalidades disponibles, una vez que la aplicación este disponible en Google Play y Firefox Marketplace.' | trans }}
+                    </p>
+
+                    <p class="stack-description mt20">
+                        {{ 'Así mismo, cualquier usuario que quiera contribuir en el proyecto valorando la aplicación o aportando nuevas e inovadoras ideas podrá hacerlo a traves de nuestro correo electrónico ' ~ contact_email | trans }}
+                    </p>
+                </div><!-- .col-md-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="stack-title">{{ 'Condiciones de uso de Ecucacity' | trans }}</h2>
+                    <p class="stack-description">
+                        {{ 'La presente Web puede ser visitada por cualquier USUARIO de forma libre y gratuita. No obstante, para que se le puedan prestar determinados servicios será necesario que el USUARIO se registre en la parte de la página web habilitada a tal efecto; el USUARIO garantiza en todo momento la autenticidad, veracidad y calidad de los datos comunicados, y será el único responsable de las manifestaciones falsas, inexactas, denigrantes o que puedan causar cualquier tipo de perjuicio a terceros.' | trans }}
+                        <br>
+                        <b>{{ 'En caso de tener que contactar con la dirección de la página web, la Dirección de correo electrónico habilitada a tal efecto es:' }}
+                        <a href="mailto:{{ contact_email }}" title="{{ 'Contacta con nosotros' | trans }}">{{ contact_email }}</a></b>
+                    </p>
+                </div><!-- .col-md-12 -->
+            </div><!-- .row -->
+        </div><!-- .container .stack -->
+    </section>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

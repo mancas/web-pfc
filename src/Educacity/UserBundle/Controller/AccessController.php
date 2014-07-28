@@ -179,6 +179,6 @@ class AccessController extends CustomController
         $em->persist($firstUser);
         $em->flush();
 
-        return $this->render('FrontendBundle:Pages:thanks-for-register.html.twig');
+        return $this->render('FrontendBundle:Pages:thanks-for-register.html.twig', array('notHome' => true));
     }
 }

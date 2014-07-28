@@ -1,3 +1,7 @@
 frontend_homepage:
     pattern:  /
     defaults: { _controller: FrontendBundle:Frontend:index }
+
+about:
+    pattern: /aviso-legal
+    defaults: { _controller: FrontendBundle:Frontend:about }

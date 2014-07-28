@@ -201,6 +201,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Educacity\\FrontendBundle\\Controller\\FrontendController::indexAction',  '_route' => 'frontend_homepage',);
         }
 
+        // about
+        if ($pathinfo === '/aviso-legal') {
+            return array (  '_controller' => 'Educacity\\FrontendBundle\\Controller\\FrontendController::aboutAction',  '_route' => 'about',);
+        }
+
         if (0 === strpos($pathinfo, '/log')) {
             if (0 === strpos($pathinfo, '/login')) {
                 // login
