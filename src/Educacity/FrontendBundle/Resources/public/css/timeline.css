@@ -1,0 +1,96 @@
+/** COLOR **/
+.timeline:before {
+  width: 3px;
+  left: 50%;
+  position: absolute;
+  background-color: #5b6064;
+  margin-left: -1.5px;
+  content: " ";
+  height: 100%;
+  min-height: 500px; }
+
+.timeline {
+  list-style: none outside none;
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box; }
+  .timeline li:before, .timeline li:after {
+    display: table;
+    content: " "; }
+  .timeline li:after {
+    clear: both; }
+  .timeline li {
+    position: relative;
+    margin: auto;
+    margin-bottom: 40px;
+    max-width: 500px; }
+    .timeline li:first-child {
+      padding-top: 20px; }
+      .timeline li:first-child .badge {
+        top: 35px; }
+    .timeline li:last-child {
+      padding-bottom: 50px; }
+    .timeline li .badge {
+      position: absolute;
+      border-radius: 50%;
+      color: white;
+      width: 50px;
+      height: 50px;
+      left: 50%;
+      margin-left: -25px;
+      padding: 0px;
+      line-height: 50px;
+      top: 15px; }
+    .timeline li .badge-content {
+      width: 40%;
+      background-color: white;
+      position: relative;
+      float: left;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.176);
+      margin-right: 15px;
+      padding: 4px; }
+      .timeline li .badge-content:before {
+        position: absolute;
+        content: " ";
+        border-width: 15px 0 15px 15px;
+        border-color: transparent #3672b1;
+        border-style: solid;
+        z-index: 100;
+        display: inline-block;
+        right: -15px;
+        top: 25px; }
+  .timeline li.inverse-badge .badge-content {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0px; }
+    .timeline li.inverse-badge .badge-content:before {
+      position: absolute;
+      content: " ";
+      border-width: 15px 15px 15px 0px;
+      border-color: transparent #3672b1;
+      border-style: solid;
+      z-index: 100;
+      display: inline-block;
+      left: -15px;
+      right: auto;
+      top: 25px; }
+  .timeline li.blue .badge, .timeline li.blue .badge-content {
+    background-color: #3672b1;
+    color: white; }
+  .timeline li.blue .badge-content:before {
+    border-color: transparent #3672b1; }
+  .timeline li.red .badge, .timeline li.red .badge-content {
+    background-color: #d9534f;
+    color: white; }
+  .timeline li.red .badge-content:before {
+    border-color: transparent #d9534f; }
+  .timeline li.gray .badge, .timeline li.gray .badge-content {
+    background-color: #5b6064;
+    color: white; }
+  .timeline li.gray .badge-content:before {
+    border-color: transparent #5b6064; }
+  .timeline li.orange .badge, .timeline li.orange .badge-content {
+    background-color: #f97b36;
+    color: white; }
+  .timeline li.orange .badge-content:before {
+    border-color: transparent #f97b36; }
