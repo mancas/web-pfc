@@ -1,14 +1,14 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3">
                 <ul class="list-unstyled">
                     <li><a title="{{ 'Condiciones de uso' | trans }}" href="{{ path('about') }}">{{ 'Condiciones de uso' | trans }}</a></li>
                     <li><a title="{{ 'Contacto' | trans }}" href="mailto:{{ contact_email }}">{{ 'Contacta con nosotros' | trans }}</a></li>
                 </ul>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-6 col-sm-8">
                 <h4>{{ 'Mantente informado' | trans }}</h4>
                 <p>{{ 'Dejanos tu correo y te informaremos en primicia de las últimas novedades de Educacity' | trans }}</p>
                 <form class="form-inline" method="post" action="{{ path('subscribe') }}">

@@ -48,7 +48,7 @@
                     <h2 class="stack-title">{{ 'Almacena tus fotos en la nube para acceder a ellas desde cualquier lugar y dispositivo' | trans }}</h2>
                 </div><!-- .col-md-6 -->
                 <div class="col-md-6">
-                    <img alt="Educacity-graph" class="pull-" src="{{ asset('bundles/frontend/img/graph_cloud.png') }}" >
+                    <img alt="Educacity-graph" class="responsive-stack-img" src="{{ asset('bundles/frontend/img/graph_cloud.png') }}" >
                 </div><!-- .col-md-6 -->
             </div><!-- .row -->
         </div><!-- .container .stack -->
@@ -57,7 +57,7 @@
     <section id="share" role="contentinfo">
         <div class="container stack share-stack">
             <div class="row">
-                <div class="col-md-7">
+                <div id="social-marketing" class="col-md-7">
                     <div>
                         <img class="img-responsive" src="{{ asset('bundles/frontend/img/share_social.png') }}">
                     </div>
@@ -66,7 +66,7 @@
                         <div class="objetive"></div>
                     </div>
                 </div><!-- .col-md-7 -->
-                <div class="col-md-5">
+                <div id="social-introduction" class="col-md-5">
                     <h2 class="stack-title">{{ 'Comparte tus mejores momentos' | trans }}</h2>
                     <p class="stack-description">
                         {{ 'Elige las fotos que quieras compartir con la comunidad o toma ideas de las fotografías realizadas por otros usuarios.' | trans }}
@@ -89,7 +89,7 @@
                 </div><!-- .col-md-5 -->
 
                 <div class="col-md-7">
-                    <ul class="timeline">
+                    <ul class="timeline responsive-stack-img">
                         <li class="blue">
                             <div class="badge">
                                 1850
@@ -167,6 +167,8 @@
                 event.preventDefault();
                 var target = $(this).attr('href');
                 $.scrollTo(target, 600);
+                if (window.innerWidth < 980)
+                    $('#navbar-collapse').collapse('toggle');
             });
         });
     </script>
