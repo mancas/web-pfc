@@ -1,13 +1,26 @@
-/web/bundles/
-/app/bootstrap.php.cache
-/app/cache/*
-/app/config/parameters.yml
-/app/logs/*
-!app/cache/.gitkeep
-!app/logs/.gitkeep
-/build/
-/vendor/
-/bin/
-/composer.phar
-/web/uploads/*
+# Bootstrap
+app/bootstrap*
+
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+web/bills/*
+web/css/*
+# composer files
+
+composer.lock
+
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
+
+# Eclipse files
+.buildpath
+.project
+.settings/*
+
+#phpstorm
 .idea
