@@ -3,7 +3,6 @@
 namespace Educacity\UserBundle\Controller;
 
 use Educacity\FrontendBundle\Controller\CustomController;
-use Educacity\UserBundle\Entity\FirstUser;
 use Educacity\UserBundle\Event\UserEvent;
 use Educacity\UserBundle\Event\UserEvents;
 use Educacity\UserBundle\Form\Model\Registration;
@@ -168,17 +167,5 @@ class AccessController extends CustomController
             return $this->redirect($this->generateUrl('login'));
         }
 
-    }
-
-    public function subscribeAction(Request $request)
-    {
-        $email = $request->request->get('email');
-        $em = $this->getEntityManager();
-        $firstUser = new FirstUser();
-        $firstUser->setEmail($email);
-        $em->persist($firstUser);
-        $em->flush();
-
-        return $this->render('FrontendBundle:Pages:thanks-for-register.html.twig', array('notHome' => true));
     }
 }

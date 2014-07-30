@@ -13,7 +13,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * @DoctrineAssert\UniqueEntity("email")
  * @UniqueEntity("email")
  */
-class FirstUser
+class Subscription
 {
     /**
      * @ORM\Id

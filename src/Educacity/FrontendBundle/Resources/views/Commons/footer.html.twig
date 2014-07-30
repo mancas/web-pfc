@@ -13,7 +13,8 @@
                 <p>{{ 'Dejanos tu correo y te informaremos en primicia de las últimas novedades de Educacity' | trans }}</p>
                 <form class="form-inline" method="post" action="{{ path('subscribe') }}">
                     <div class="form-group">
-                        <input name="email" type="email" class="form-control" placeholder="{{ 'Introduce tu email' | trans }}">
+                        {{ form_widget(form.email, { 'attr': { 'class': 'form-control required', 'placeholder': 'Introduce tu email' | trans} }) }}
+                        {{ form_rest(form) }}
                         <button type="submit" class="btn-small btn btn-blue">{{ 'Enviar' | trans }}</button>
                     </div>
                 </form>

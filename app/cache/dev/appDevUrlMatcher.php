@@ -197,7 +197,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             // subscribe
             if ($pathinfo === '/u/subscribirse') {
-                return array (  '_controller' => 'Educacity\\UserBundle\\Controller\\AccessController::subscribeAction',  '_route' => 'subscribe',);
+                return array (  '_controller' => 'UserBundle:Frontend:subscribe',  '_route' => 'subscribe',);
             }
 
         }
