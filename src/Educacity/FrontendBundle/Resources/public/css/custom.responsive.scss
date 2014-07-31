@@ -83,10 +83,32 @@ $white: #FFFFFF;
 
 @media (max-width: 800px) {
   #banner-top {
+    .h1, .h2 {
+      font-size: 28px;
+    }
+
     .text {
       left: 0px;
       margin-top: 60px;
       padding: 30px 15px;
+    }
+  }
+
+  #introduction {
+    .phone {
+      max-width: 250px;
+    }
+  }
+
+  .tablet .bg-parallax {
+    background-attachment: inherit;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .bg-parallax {
+    .parallax-title {
+      font-size: 55px;
     }
   }
 }

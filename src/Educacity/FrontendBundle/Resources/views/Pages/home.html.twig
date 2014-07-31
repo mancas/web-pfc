@@ -13,7 +13,7 @@
         <div class="container stack">
             <div class="row">
                 <div class="col-md-6">
-                    <img alt="Educacity-smartphone" class="pull-right" src="{{ asset('bundles/frontend/img/nexus-giralda.png') }}" >
+                    <img alt="Educacity-smartphone" class="pull-right phone" src="{{ asset('bundles/frontend/img/nexus-giralda.png') }}" >
                 </div><!-- .col-md-6 -->
                 <div class="col-md-6">
                     <h2 class="stack-title">{{ 'Historia y tecnología unidas en una única aplicación' | trans }}</h2>
@@ -38,7 +38,7 @@
                     <div class="overlay"></div>
                 </div>
             </div>
-        </secimeion>
+        </section>
     </div><!-- .bg-parallax .multimedia -->
 
     <section id="features" class="blue" role="contentinfo">
@@ -162,6 +162,14 @@
 {% block javascripts %}
     <script src="{{ asset('bundles/frontend/js/scrollTo.min.js') }}"></script>
     <script>
+        if ( /iPad/i.test(navigator.userAgent) ) {
+            jQuery("html").addClass("tablet");
+        } else if ( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            jQuery("html").addClass("mobile");
+        } else {
+            jQuery("html").addClass("desktop");
+        }
+
         $('document').ready(function() {
             $(".scrollto a").click(function (event) {
                 event.preventDefault();

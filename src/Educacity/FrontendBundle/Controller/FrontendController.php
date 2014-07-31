@@ -3,6 +3,7 @@
 namespace Educacity\FrontendBundle\Controller;
 
 use Educacity\FrontendBundle\Form\Type\SubscriptionType;
+use Symfony\Component\HttpFoundation\Request;
 
 class FrontendController extends CustomController
 {
@@ -28,7 +29,7 @@ class FrontendController extends CustomController
             $em->persist($subscription);
             $em->flush();
 
-            return $this->render('FrontendBundle:Pages:thanks-for-register.html.twig', array('notHome' => true));
+            return $this->render('FrontendBundle:Pages:thanks-for-register.html.twig', array('notHome' => true, 'form' => $form->createView()));
         }
 
         return $this->redirect($this->generateUrl('frontend_homepage'));

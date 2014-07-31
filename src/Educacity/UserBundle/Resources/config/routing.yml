@@ -4,4 +4,4 @@ register:
 
 subscribe:
     pattern: /subscribirse
-    defaults: { _controller: UserBundle:Frontend:subscribe }
+    defaults: { _controller: FrontendBundle:Frontend:subscribe }
