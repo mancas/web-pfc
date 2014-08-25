@@ -33,6 +33,11 @@ class User implements UserInterface, \Serializable, EquatableInterface
     protected $email;
 
     /**
+     * @ORM\Column(type="string", length=250, nullable=true)
+     */
+    protected $name;
+
+    /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank();
      * @Assert\Length(min=6)
@@ -210,5 +215,21 @@ class User implements UserInterface, \Serializable, EquatableInterface
     public function getValidated()
     {
         return $this->validated;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 }
